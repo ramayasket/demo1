@@ -20,7 +20,7 @@
         {
             @lock.EnterWriteLock();
             
-            try { count += value; }
+            try { checked { count += value; } }
 
             finally { @lock.ExitWriteLock(); }
         }
